@@ -18,7 +18,8 @@ By blending gesture recognition, motion sensing, and light-based speed adjustmen
 
 - **Motor Control**  
   - Implemented with **voltage-based commands**:  
-    - `3.3V` → Forward motion  
+    - `3.3V` → Forward motion
+    - `1.65V` → Stationary
     - `0V` → Reverse  
     - Proportional voltages → Left/Right steering  
 
@@ -27,7 +28,7 @@ By blending gesture recognition, motion sensing, and light-based speed adjustmen
 ## Development Process
 1. Reverse-engineered the original RC car controller by stripping and analyzing wiring.  
 2. Prototyped the circuit on a breadboard before embedding sensors into the glove.  
-3. Adapted and merged example code from **Adafruit** to control multiple sensors and the Feather M4.  
+3. Wrote custom Python code to control multiple sensors and the Feather M4.  
 4. Tested and calibrated sensor responses for smooth steering and speed control.  
 5. Installed permanent wiring into the car for a fully integrated Smart-Glove system.  
 
