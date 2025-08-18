@@ -1,6 +1,50 @@
-# Smart-Glove-Controller
-Using an LSM6DSOX accelerometer, two APDS-9960 proximity/gesture sensors, and an Adafruit Feather M4 microcontroller, I reverse-engineered the car’s original controller by stripping its wiring and integrating a custom-built system. I developed a glove-based control interface that translated hand movements into driving commands: making a fist initiated forward motion, while wrist rotations steered the car.
+# 🧤 Smart-Glove RC Car Controller
 
-The optical sensors dynamically adjusted speed based on ambient light, and the accelerometer measured motion in the X/Y directions to guide steering. I implemented voltage-based motor control through custom Python code—3.3V for forward motion, 0V for reverse, and proportional voltage adjustments for right/left steering. I also integrated the vehicle’s headlights with an additional optical sensor, enabling automatic activation in low-light conditions.
+This project is a **glove-based control system** I built for an RC car, combining embedded hardware, sensors, and custom Python code. Instead of using the car’s original remote, I reverse-engineered the wiring and integrated a custom control interface powered by an **Adafruit Feather M4 microcontroller**.  
 
-The control software was adapted from example code on the Adafruit website, where the sensors and Feather M4 were sourced. I modified and merged these code modules to create the final Smart-Glove control system. Prototyping and testing were performed on a breadboard before assembling the glove and installing the permanent wiring in the vehicle.
+By blending gesture recognition, motion sensing, and light-based speed adjustment, the glove turns natural hand movements into driving commands — making RC car driving feel more futuristic and intuitive.  
+
+---
+
+## ⚙️ How It Works
+- **Hand Gestures**  
+  - Making a **fist** → Forward motion  
+  - Wrist **rotations** → Steer left or right  
+
+- **Sensors Used**  
+  - **LSM6DSOX accelerometer**: Measures X/Y motion for steering.  
+  - **Two APDS-9960 proximity/gesture sensors**: Detect hand movements and adjust speed dynamically.  
+  - **Optical sensor for headlights**: Automatically turns headlights on in low-light conditions.  
+
+- **Motor Control**  
+  - Implemented with **voltage-based commands**:  
+    - `3.3V` → Forward motion  
+    - `0V` → Reverse  
+    - Proportional voltages → Left/Right steering  
+
+---
+
+## Development Process
+1. Reverse-engineered the original RC car controller by stripping and analyzing wiring.  
+2. Prototyped the circuit on a breadboard before embedding sensors into the glove.  
+3. Adapted and merged example code from **Adafruit** to control multiple sensors and the Feather M4.  
+4. Tested and calibrated sensor responses for smooth steering and speed control.  
+5. Installed permanent wiring into the car for a fully integrated Smart-Glove system.  
+
+---
+
+## Hardware
+- **Adafruit Feather M4 microcontroller**  
+- **LSM6DSOX accelerometer**  
+- **APDS-9960 gesture/proximity sensors (x2)**  
+- **Custom wiring harness** (reverse-engineered from stock controller)  
+- **RC Car with headlights**
+
+---
+
+##  Software
+- Written in **Python**, running on the Feather M4.  
+- Sensor libraries sourced from [Adafruit’s examples](https://learn.adafruit.com/).  
+- Modified and combined to create a unified Smart-Glove control interface.  
+
+
