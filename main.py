@@ -116,8 +116,8 @@ while True:
         set_analog_output(analog_out_accel, voltage)
 
         # Print the values for debugging
-    #    print(f"Lux: {lux:.2f}, Voltage (Accel): {voltage:.3f} V")
-      #  print(f"Acceleration (x, y, z): {x_accel:.2f}, {y_accel:.2f}, {z_accel:.2f}")
+        # print(f"Lux: {lux:.2f}, Voltage (Accel): {voltage:.3f} V")
+        # print(f"Acceleration (x, y, z): {x_accel:.2f}, {y_accel:.2f}, {z_accel:.2f}")
 
     on_off(0.01)
     time.sleep(0.01)
